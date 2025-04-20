@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up / Login - Awesome Tech Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset some default browser styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 2rem;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+
+    .button-container {
+      text-align: center;
+    }
+
+    .button-container a {
+      display: inline-block;
+      background-color: #0f172a;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .button-container a:hover {
+      background-color: #1e293b;
+    }
+
+    .switch-link {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .switch-link a {
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .switch-link a:hover {
+      text-decoration: underline;
+    }
+
+    .social-login {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .social-login a {
+      display: inline-block;
+      background-color: #3b5998;
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      margin: 0 0.5rem;
+      transition: background-color 0.3s;
+    }
+
+    .social-login a:hover {
+      background-color: #344e86;
+    }
+
+    .social-login a.facebook {
+      background-color: #3b5998;
+    }
+
+    .social-login a.facebook:hover {
+      background-color: #344e86;
+    }
+
+    .social-login a.google {
+      background-color: #db4437;
+    }
+
+    .social-login a.google:hover {
+      background-color: #c53727;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="button-container">
+        <a href="#" id="signupButton">Sign Up</a>
+      </div>
+    </form>
+    <div class="switch-link">
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+    <div class="social-login">
+      <a href="#" class="facebook" onclick="handleSocialLogin('facebook')">Sign Up with Facebook</a>
+      <a href="#" class="google" onclick="handleSocialLogin('google')">Sign Up with Google</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('signupButton').addEventListener('click', function(event) {
+      event.preventDefault();
+      // Add signup logic here
+      alert('Sign Up Successful!');
+      window.location.href = 'dashboard.html';
+    });
+
+    function handleSocialLogin(provider) {
+      alert(`Signing up with ${provider}`);
+      // Add social login logic here
+      window.location.href = 'dashboard.html';
+    }
+  </script>
+</body>
+</html>
